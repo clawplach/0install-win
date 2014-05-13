@@ -106,6 +106,10 @@
       <Project>{BD330A44-DABF-43E9-83B4-0750F8F1DB9D}</Project>
       <Name>Store</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SatSolver\SatSolver.fsproj">
+      <Project>{276D5475-EDC7-4ED7-AAB6-A40CB335D046}</Project>
+      <Name>SatSolver</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\CodeAnalysisDictionary.xml" />

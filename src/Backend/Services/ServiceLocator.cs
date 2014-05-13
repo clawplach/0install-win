@@ -105,16 +105,7 @@ namespace ZeroInstall.Services
         /// <summary>
         /// Chooses a set of <see cref="Implementation"/>s to satisfy the requirements of a program and its user. 
         /// </summary>
-        public ISolver Solver
-        {
-            get
-            {
-                return Get(ref _solver, () => new FallbackSolver(
-                    new BacktrackingSolver(Config, FeedManager, Store, Handler),
-                    new PythonSolver(Config, FeedManager, Handler)));
-            }
-            set { _solver = value; }
-        }
+        public ISolver Solver { get { return new SatSolver(Config, FeedManager, Store, Handler); } set { _solver = value; } }
 
         /// <summary>
         /// Used to download missing <see cref="Implementation"/>s.
